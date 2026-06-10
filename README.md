@@ -361,24 +361,6 @@ AI_RUN_JOBS_INLINE=true
 CELERY_TASK_ALWAYS_EAGER=true
 ```
 
-### Windows 一键启动
-
-如果仓库根目录已经补齐 `start-dev.bat`，并且 `.venv/`、`frontend/node_modules/`、`backend/.env` 都准备好了，可以直接执行：
-
-```powershell
-.\start-dev.bat
-```
-
-脚本通常会完成：
-
-- 检查 `.venv/` 和 `frontend/node_modules/`。
-- 启动 Docker 中的 MySQL 和 Redis。
-- 关闭旧的后端、前端和 Celery 进程。
-- 分别打开 Backend、Frontend、Celery Worker 窗口。
-- 自动打开浏览器。
-
-一键脚本可能使用 `5176` 作为前端端口，手动 `npm run dev --prefix frontend` 默认使用 `5173`。两个端口只是启动方式不同，不代表后端配置冲突。
-
 ### 演示账号
 
 后端启动后会自动注入以下本地演示账号：
